@@ -37,6 +37,7 @@
     <span class="border-box-content">66%</span>
    </Decoration12>
    <Loading class="bx"/>
+   <WaterLevelPond class="bx"/>
   </div>
 </template>
 
@@ -67,6 +68,7 @@ import Decoration10 from './components/Decoration10/index.vue'
 import Decoration11 from './components/Decoration11/index.vue'
 import Decoration12 from './components/Decoration12/index.vue'
 import Loading from './components/Loading/index.vue'
+import WaterLevelPond from './components/WaterLevelPond/index.vue'
 </script>
 
 <style scoped>
