@@ -25,6 +25,7 @@
     <span class="border-box-content">66%</span>
    </Decoration7>
    <Decoration8 class="bx"/>
+   <Decoration8 :reverse="true" class="bx"/>
    <Decoration9 style="width: 300px;height: 300px;">
     <span class="border-box-content">66%</span>
   </Decoration9>
@@ -32,7 +33,7 @@
    <Decoration11 style="width: 300px;height: 100px;">
     <span class="border-box-content">66%</span>
    </Decoration11>
-   <Decoration12 style="width: 300px;height: 300px;">
+   <Decoration12 style="width: 300px;height: 300px;" halo-dur="2" scan-dur="3">
     <span class="border-box-content">66%</span>
    </Decoration12>
    <Loading class="bx"/>
