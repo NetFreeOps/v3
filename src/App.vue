@@ -33,11 +33,13 @@
    <Decoration11 style="width: 300px;height: 100px;">
     <span class="border-box-content">66%</span>
    </Decoration11>
-   <Decoration12 style="width: 300px;height: 300px;" halo-dur="2" scan-dur="3">
+   <Decoration12 style="width: 300px;height: 300px;" :halo-dur="2" :scan-dur="3">
     <span class="border-box-content">66%</span>
    </Decoration12>
    <Loading class="bx"/>
-   <WaterLevelPond class="bx"/>
+   <WaterLevelPond :config="config1"  style="width: 150px;height: 200px;"/>
+   <WaterLevelPond :config="config2"  style="width: 150px;height: 200px;"/>
+   <WaterLevelPond :config="config3"  style="width: 150px;height: 200px;"/>
   </div>
 </template>
 
@@ -69,6 +71,26 @@ import Decoration11 from './components/Decoration11/index.vue'
 import Decoration12 from './components/Decoration12/index.vue'
 import Loading from './components/Loading/index.vue'
 import WaterLevelPond from './components/WaterLevelPond/index.vue'
+
+const config1 = {
+  data:[55],
+  shape:'round',
+  //colors:['#00a854','#006738'],
+  waveNum:5,
+  waveHeight:10,
+  waveOpacity:0.4,
+  formatter:'{value}%'
+}
+const config2 = {
+  data:[66,55],
+  shape:'roundRect',
+  formatter:'{value}%'
+}
+const config3 = {
+  data:[66],
+  shape:'rect ',
+  formatter:'{value}%'
+}
 </script>
 
 <style scoped>
