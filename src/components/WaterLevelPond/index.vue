@@ -252,7 +252,6 @@ onBeforeUnmount(() => {
     font-size: 25px;
     font-weight: bold;
     text-anchor: middle;
-    dominant-baseline: middle;
   }
 
   ellipse, rect {

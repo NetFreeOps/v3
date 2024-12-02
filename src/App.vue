@@ -40,10 +40,27 @@
    <WaterLevelPond :config="config1"  style="width: 150px;height: 200px;"/>
    <WaterLevelPond :config="config2"  style="width: 150px;height: 200px;"/>
    <WaterLevelPond :config="config3"  style="width: 150px;height: 200px;"/>
+   
+   <Modal1 :title="title" v-model:visible="visible1"/>
+   <Modal2 :title="title" v-model:visible="visible2"/>
+   <Modal3 :title="title" v-model:visible="visible3"/>
+   <Modal4 :title="title" v-model:visible="visible4"/>
+
+   <div class="btn-container">
+    <button @click="visible1 = !visible1" class="btn">弹窗1</button>
+    <button @click="visible2 = !visible2" class="btn">弹窗2</button>
+    <button @click="visible3 = !visible3" class="btn">弹窗3</button>
+    <button @click="visible4 = !visible4" class="btn">弹窗4</button>
+   </div>
+
+
+
+
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import BorderBox1 from './components/BorderBox1/index.vue'
 import BorderBox2 from './components/BorderBox2/index.vue'
 import BorderBox3 from './components/BorderBox3/index.vue'
@@ -71,6 +88,10 @@ import Decoration11 from './components/Decoration11/index.vue'
 import Decoration12 from './components/Decoration12/index.vue'
 import Loading from './components/Loading/index.vue'
 import WaterLevelPond from './components/WaterLevelPond/index.vue'
+import Modal1 from './components/Modal1/index.vue'
+import Modal2 from './components/Modal2/index.vue'
+import Modal3 from './components/Modal3/index.vue'
+import Modal4 from './components/Modal4/index.vue'
 
 const config1 = {
   data:[55],
@@ -91,6 +112,11 @@ const config3 = {
   shape:'rect ',
   formatter:'{value}%'
 }
+const title = ref('标题')
+const visible1 = ref(false)
+const visible2 = ref(false)
+const visible3 = ref(false)
+const visible4 = ref(false)
 </script>
 
 <style scoped>
@@ -114,5 +140,36 @@ const config3 = {
       justify-content: center;
       align-items: center;
     }
+.btn{
+  /* position: absolute;
+  top: 10px;
+  left: 10px; */
+  width: 150px;
+  height: 40px;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #42b983, #33a06f);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(66, 185, 131, 0.3);
+  transition: all 0.3s ease;
 
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(66, 185, 131, 0.4);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(66, 185, 131, 0.2);
+  }
+}
+.btn-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 </style>
